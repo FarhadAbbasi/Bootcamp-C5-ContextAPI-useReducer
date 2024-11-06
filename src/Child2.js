@@ -12,7 +12,7 @@ function Child2() {
         It is using "useReducer" hook to update the values. <br/> Number  = {number} <br/>
         <button onClick={ ()=> setnumber({type:"increment", value: 50}) }> Increment Number </button>
         <button onClick={ ()=> setnumber({type:"decrement", value: 50}) }> Decrement Number </button>
-        <br/> <br/> 
+        <br/> <br/>  
       </div>
     );
   }
