@@ -7,9 +7,11 @@ function Child() {
     let val=useContext(ValueContext) ;
     let updatevalue= val[1];
     return (   
-      <div>
-          This is Child  component accessing value from ValueContext (global veriable) using Context API. <br/>  Val  = {val} + {val[0]} +  {val[1]}. <br/>
+      <div className="child"> 
+          This is Child #1. accessing value from ValueContext (global veriable) using Context API. <br/> 
+          It is using "useState" hook to update the values. <br/>  Val  = {val} . <br/>
           <button onClick={ ()=> updatevalue(++val[0])} > Update Value </button>
+          <br/> <br/> 
       </div>
     );
   }

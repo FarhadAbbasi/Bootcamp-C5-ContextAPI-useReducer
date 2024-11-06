@@ -11,7 +11,7 @@ function App() {
 // Which means .Provider makes this ValueContext a dynamic global veriable accross the app.
   return (   
     <ValueContext.Provider value={value}>       
-      <div>
+      <div className='AppSpace' >
         This is App Component. 
         <Parent> </Parent>
 
