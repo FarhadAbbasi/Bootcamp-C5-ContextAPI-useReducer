@@ -1,11 +1,16 @@
+//import { useContext } from "react";
+import Child from "./Child";
+//import ValueContext from "./ValueContext";
 
 
 
-function Parent(props) {
+function Parent() {
+//    let value= useContext(ValueContext) ;
+
   return (   
     <div>
-        This is Parent component. <br/>
-        Number = {props.num}.
+        This is Parent component.<br/> <br/> 
+        <Child> </Child>
     </div>
   );
 }

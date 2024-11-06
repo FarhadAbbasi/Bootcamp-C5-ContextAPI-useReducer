@@ -1,26 +1,33 @@
+//import { useState } from 'react';
 import { useState } from 'react';
 import './App.css';
 import Parent from './Parent';
+import ValueContext from './ValueContext';
 
 function App() {
-let [number, setnumber] = useState(45);
+  let value = useState(450); 
 
+  // If <ValueContext.Provider> is removed from here, then all the childs will access the default value given in ValueContext component only and is of no use.
+// Which means .Provider makes this ValueContext a dynamic global veriable accross the app.
   return (   
-    <div>
-      Hello World
-      <Parent num={number} ></Parent>
-      <button onClick={ ()=> setnumber(++number)}> Update Number </button>
+    <ValueContext.Provider value={value}>       
+      <div>
+        This is App Component. 
+        <Parent> </Parent>
 
-
-      <a
+ 
+       <br/> <br/>
+       <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          Learn React
-      </a>
-    </div>
+         >
+            Learn React
+       </a>
+     </div>
+    </ValueContext.Provider>
+
   );
 }
 
